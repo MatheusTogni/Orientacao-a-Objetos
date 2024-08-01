@@ -32,16 +32,22 @@ namespace E1
             Console.WriteLine($"{_marca} {_modelo} está freando...");
         }
 
+        // Assinaturas
+        public virtual void Abastecer()
+        {
+            Console.WriteLine($"{_marca} {_modelo} está sendo abastecido...");
+        }
+
+        public bool Abastecer(string tipoCombustivel)
+        {
+            Console.WriteLine($"{_marca} {_modelo} está sendo abastecido com {tipoCombustivel}...");
+            return true;
+        }
+
         // Método sobrecarga
         public virtual void EmitirSom()
         {
             Console.WriteLine($"{_marca} {_modelo} está emitindo um som padrão...");
-        }
-
-        // Método sobrescrita
-        public virtual void Abastecer()
-        {
-            Console.WriteLine($"{_marca} {_modelo} está sendo abastecido...");
         }
 
         // Construtor
